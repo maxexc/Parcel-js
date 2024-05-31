@@ -1,0 +1,30 @@
+{
+  "name": "parcel",
+  "version": "1.0.0",
+  "description": "main features",
+  "source": "src/index.html",
+  "main": "/src/app.js",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxexc/Parcel-js.git"
+  },
+  "author": "maxexc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxexc/Parcel-js/issues"
+  },
+  "homepage": "https://github.com/maxexc/Parcel-js#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "joi": "^17.13.1",
+    "nanoid": "^3.3.7",
+    "validator": "^13.12.0"
+  }
+}
