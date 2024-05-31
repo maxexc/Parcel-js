@@ -1,2 +1,2 @@
-# Parsel-js
+# Parcel-js
 main features
