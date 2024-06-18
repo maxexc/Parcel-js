@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "main features",
   "source": "src/index.html",
-  "main": "index.js",
   "homepage": "https://github.com/maxexc/Parcel-js/",
   "scripts": {
     "start": "parcel src/*.html",
