@@ -10,8 +10,60 @@
 </head>
 
 <body>
-    <section>New parcel</section>
-    <script src="app.js" type="module"></script>
+    <section>Parcel-js</section>
+    <h2>Real-time mode</h2>
+    <img src="../img/avocado-cooked-delicious-dish-262959.jpg" width="640" height="480" alt="img" />
+    <br>
+    <div class="container">
+        <div class="feedback-buttons">
+            <button id="likeButton"><img src="../img/like.svg" alt="Like"></button>
+            <button id="neutralButton"><img src="../img/neutral.svg" alt="Neutral"></button>
+            <button id="dislikeButton"><img src="../img/dislike.svg" alt="Dislike"></button>
+        </div>
+        <h3 class="notice">PLEASE LEAVE FEEDBACK</h3>
+        <div class="diagram-container">
+            <div class="diagram" id="diagram">
+                <div class="total" id="total">Total</div>
+            </div>
+            <ul class="statistic-list">
+                <li>
+                    <span class="category">good</span>
+                    <span class="dots"></span>
+                    <span id="goodCount">0</span>
+                </li>
+                <li>
+                    <span class="category">neutral</span>
+                    <span class="dots"></span>
+                    <span id="neutralCount">0</span>
+                </li>
+                <li>
+                    <span class="category">bad</span>
+                    <span class="dots"></span>
+                    <span id="badCount">0</span>
+                </li>
+                <li>
+                    <span class="category totaly">total</span>
+                    <span class="dots"></span>
+                    <span id="totalCount">0</span>
+                </li>
+                <li>
+                    <span class="category">positive feedback</span>
+                    <span class="dots"></span>
+                    <span id="positivePercentage">0%</span>
+                </li>
+            </ul>
+            <div class="like-icon" id="likeIconContainer">
+                <div class="heart-mask">
+                    <img src="../img/heart.svg" alt="Like Icon" id="likeIcon">
+                </div>
+                <div class="heart-fill" id="heartFill"></div>
+                <div class="percentage-text" id="percentageText">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js" type="module"></script>
+    <script src="/src/js/diagram.js" type="module"></script>
 </body>
 
 </html>
