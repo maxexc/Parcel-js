@@ -2,11 +2,12 @@
   "name": "parcel",
   "version": "1.0.0",
   "description": "main features",
-  "source": "src/index.html",
   "homepage": "https://github.com/maxexc/Parcel-js/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /Parcel-js/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,7 @@
     "url": "https://github.com/maxexc/Parcel-js/issues"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "parcel": "^2.12.0"
   },
   "dependencies": {

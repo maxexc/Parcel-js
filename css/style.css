@@ -1,6 +1,6 @@
 section {
     display: block;
-    width: 640px;
+    max-width: 640px;
     border-bottom-color: rgb(234, 236, 239);
     border-bottom-style: solid;
     border-bottom-width: 1.11111px;
@@ -13,16 +13,27 @@ section {
         "Apple Color Emoji",
         "Segoe UI Emoji",
         "Segoe UI Symbol";
-    font-size: 32px; 
+    font-size: clamp(1.25rem, calc(0.96rem + 1.46vw), 2rem);
     font-weight: 600;
 }
 
 h2 {
     color: rgb(20, 160, 95);
     font-family: cursive;
+    font-size: clamp(1rem, calc(0.76rem + 1.22vw), 1.63rem);
+    margin: 5px 0;
 }
 
 /* Weel Diagram */
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 6x4;
+    max-width: 640px;
+    height: auto;
+    object-fit: contain;
+    box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+}
 
 .notice {
     font-family: 'Courier New';
@@ -37,8 +48,10 @@ h2 {
     flex-direction: column;
     padding: 10px 0;
     border-radius: 12px;
-    width: 640px;
-    height: 220px;
+    width: 100%;
+    aspect-ratio: 9x3;
+    max-width: 640px;
+    height: auto;
     box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
     align-items: center;
 }
@@ -66,7 +79,12 @@ h2 {
 
 .diagram-container {
     display: none;
+    width: 100%;
+    aspect-ratio: 9x2;
+    max-width: 640px;
+    max-height: 150px;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     transition: opacity 1s ease-in-out;
     opacity: 0;
@@ -78,8 +96,10 @@ h2 {
 }
 
 .diagram {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    max-width: 150px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -98,13 +118,14 @@ h2 {
 
 .total {
     position: absolute;
-    width: 75px;
-    height: 75px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    max-width: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    font-size: 27px;
+    font-size: clamp(0.94rem, calc(0.48rem + 2.31vw), 1.69rem);
     background-color: black;
     color: white;
 }
@@ -112,7 +133,7 @@ h2 {
 .statistic-list {
     width: 250px;
     font-family: 'Arial';
-    font-size: 18px;
+    font-size: clamp(0.63rem, calc(0.22rem + 2vw), 1.25rem);
     margin-left: 0;
     /* Отступ слева в браузере IE и Opera */
     padding-left: 0;
@@ -137,8 +158,9 @@ h2 {
 
 .like-icon {
     position: relative;
-    width: 165px;
-    height: 165px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    max-width: 165px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,11 +181,11 @@ h2 {
 .heart-fill {
     position: absolute;
     width: 87%;
-    height: 80%;
+    aspect-ratio: 100/92;
     background-image: linear-gradient(rgb(0, 255, 106), rgb(84, 128, 111));
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    clip-path: url(#heartClipPath);
+    /* clip-path: url(#heartClipPath); */
     transform-origin: bottom;
     transition: transform 0.3s ease;
     z-index: -1;
@@ -173,10 +195,77 @@ h2 {
 .percentage-text {
     position: absolute;
     color: black;
-    font-size: 24px;
+    font-size: clamp(0.94rem, calc(0.59rem + 1.73vw), 1.5rem);
     font-weight: bold;
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
 }
 
+
+@media (max-width: 640px) {
+
+    .feedback-buttons img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .diagram-container {
+        max-height: 120px;
+        gap: 10px;
+    }
+
+    .diagram {
+        max-width: 125px;
+    }
+    .like-icon {
+        max-width: 138px;
+    }
+
+    .total {
+        max-width: 62px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback-buttons img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .diagram-container {
+        max-height: 95px;
+    }
+
+    .diagram {
+        max-width: 100px;
+    }
+
+    .like-icon {
+        max-width: 110px;
+    }
+
+    .total {
+        max-width: 50px;
+    }
+}
+
+@media (max-width: 430px) {
+    .diagram-container {
+        max-height: 95px;
+    }
+
+    .diagram {
+        max-width: 95px;
+    }
+
+    .total {
+        max-width: 47px;
+    }
+}
+
+@media (max-width: 412px) {
+    .diagram-container {
+        max-height: 92px;
+    }
+}
