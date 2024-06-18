@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "main features",
   "source": "src/index.html",
+  "homepage": "https://github.com/maxexc/Parcel-js/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html",
+    "build": "parcel build src/*.html --public-url /Parcel-js/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/maxexc/Parcel-js/issues"
   },
-  "homepage": "https://github.com/maxexc/Parcel-js#readme",
   "devDependencies": {
     "parcel": "^2.12.0"
   },
