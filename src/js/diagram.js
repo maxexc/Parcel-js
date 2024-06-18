@@ -14,10 +14,10 @@ const updateDiagram = () => {
 
     if (total > 0) {
         noticeElement.style.opacity = 0;
-        setTimeout(() => {
-            noticeElement.style.display = 'none';
-            diagramContainer.classList.add('show');
-        }, 500);
+        noticeElement.style.display = 'none';
+        diagramContainer.classList.add('show');
+        // setTimeout(() => {
+        // }, 100);
     }
 
     diagramElement.style.setProperty('background',
