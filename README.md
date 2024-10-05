@@ -28,3 +28,4 @@ This project demonstrates the main features of the Parcel bundler, including its
    ```bash
    npm start
    ```
+
