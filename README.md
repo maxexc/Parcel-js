@@ -20,11 +20,11 @@ This project demonstrates the main features of the Parcel bundler, including its
    ```bash
    git clone https://github.com/maxexc/Parcel-js.git
    ```
-2. Clone the repository:
+2. Install dependencies:
    ```bash
    npm install
    ```
-3. Clone the repository:
+3. Run the project:
    ```bash
    npm start
    ```
